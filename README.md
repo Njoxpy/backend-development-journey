@@ -116,7 +116,3 @@ This project uses **Mocha** and **Chai** for unit and integration testing.
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-This streamlined README should be easier to follow for the backend setup and project. Let me know if you need anything else!
