@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "100 days of backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "server",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Njoxpy/backend-development-journey.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "NjoxPy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Njoxpy/backend-development-journey/issues"
+  },
+  "homepage": "https://github.com/Njoxpy/backend-development-journey#readme"
+}
