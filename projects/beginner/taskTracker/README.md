@@ -45,28 +45,28 @@ These properties should be stored in the JSON file when adding a task and update
 ## Getting Started
 
 ### Set Up Your Development Environment
-1. Choose a programming language (e.g., Python, JavaScript, etc.).
-2. Ensure you have a code editor or IDE installed (e.g., VSCode, PyCharm).
+1. Choose a programming language (e.g., Python, JavaScript, etc.). ✅
+2. Ensure you have a code editor or IDE installed (e.g., VSCode, PyCharm). ✅
 
 ### Project Initialization
-1. Create a new project directory for your Task Tracker application.
-2. Initialize a version control system (e.g., Git).
+1. Create a new project directory for your Task Tracker application. ✅
+2. Initialize a version control system (e.g., Git). ✅
 
 ---
 
 ## Implementation Steps
 
-1. **Set up the basic application structure** to handle user inputs and task management.
+1. **Set up the basic application structure** to handle user inputs and task management. ✅
 2. Implement each feature one by one:
-   - Add task functionality
-   - Listing tasks
-   - Updating tasks
+   - Add task functionality ✅
+   - Listing tasks ✅
+   - Updating tasks ✅
    - Marking tasks by status (`in-progress` or `done`)
-   - Deleting tasks
+   - Deleting tasks ✅
 3. **Test each feature individually** to ensure it works as expected. Verify tasks are stored correctly in the JSON file.
 4. Handle errors and edge cases:
-   - Missing or invalid inputs
-   - Non-existent task IDs
+   - Missing or invalid inputs ✅
+   - Non-existent task IDs ✅
 5. Finalize the project:
    - Clean up the code and add comments.
    - Write a `README.md` file to document how to use the application.
