@@ -1,4 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
+const User = require("./user.model");
 
 const mongoose = require("mongoose");
 const todoSchema = new mongoose.Schema(
@@ -25,6 +26,11 @@ const todoSchema = new mongoose.Schema(
             },
             required: true,
             unique: true
+        },
+        userId: {
+            type: mongoose.Types.ObjectId,
+            ref: "User",
+            required: true
         }
     },
     {timestamps: true}

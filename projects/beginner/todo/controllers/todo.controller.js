@@ -6,14 +6,18 @@ const EMPTY = require("../utils/utils")
 
 const createTodo = async (req, res) => {
 
-    const { title, description } = req.body;
+    const { title, description, userId } = req.body;
+    
     console.log(title.length)
     console.log(description.length)
     // validate inputs
-    if (!title || !description) {
+    if (!title || !description || !userId) {
         return res.status(400).json({message:"All fields are required"})
     }
 
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+        return res.status(400).json({message: "user not does not exits!"})
+    }
     if (title.length > 50) {
         return res.status(400).json({message:"Title should not exceed 50 characters"})
     }
