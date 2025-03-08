@@ -1,29 +1,39 @@
-const express = require('express');
+const express = require("express");
 
 // controllers
-const { createTask, getTasks, getTask, updateTask, deleteTask, markStatus } = require('../controllers/task.controller');
-const router = express.Router()
+const {
+  createTask,
+  getTasks,
+  getTask,
+  updateTask,
+  deleteTask,
+  markStatus,
+} = require("../controllers/task.controller");
+const router = express.Router();
 
 // middleware
-const validateObjectId = require("../middleware/validation/validateObjectId")
-const validateTaskCreate = require("../middleware/validation/validateCreateTask")
+const validateObjectId = require("../middleware/validation/validateObjectId");
+const validateTaskCreate = require("../middleware/validation/validateCreateTask");
+
+// auth
+const authenticate = require("../middleware/auth/authenticate");
 
 // create
-router.post("/",validateTaskCreate, createTask)
+router.post("/", authenticate, validateTaskCreate, createTask);
 
 // read
-router.get("/", getTasks)
+router.get("/", authenticate, getTasks);
 
 // get task
-router.get("/:id",validateObjectId, getTask)
+router.get("/:id", authenticate, validateObjectId, getTask);
 
-// update 
-router.patch("/:id", validateObjectId, updateTask)
+// update
+router.patch("/:id", authenticate, validateObjectId, updateTask);
 
 // delete
-router.delete("/:id",validateObjectId, deleteTask);
+router.delete("/:id", authenticate, validateObjectId, deleteTask);
 
 // mark done, in progress
-router.put("/:id/status/:id", validateObjectId, markStatus)
+router.put("/:id/status/:id", authenticate, validateObjectId, markStatus);
 
 module.exports = router;

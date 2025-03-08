@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema(
   {
@@ -10,12 +10,13 @@ const taskSchema = new mongoose.Schema(
       required: [true, "description is required"],
       type: String,
     },
-    status:{
+    status: {
       type: String,
       enum: ["in progress", "done"],
       default: "in progress",
-      required: [true, "status is required"]
-    }
+      required: [true, "status is required"],
+    },
+    // add user id
   },
   { timestamps: true }
 );
